@@ -14,6 +14,19 @@ def count_characters(text):
             charcters[c] = 1
     return charcters
 
-    
+
+# Return num Value of a Dictionary
+def sort_on(items):
+    return items["num"]
+
+# Creates a sorted list of dictionaries
+
+def sort_dictionaries(d):
+    li = []
+    for key, value in d.items():
+        new_dict = {"char": key, "num": value}
+        li.append(new_dict)
+        li.sort(reverse=True, key=sort_on)
 
 
+    return li
